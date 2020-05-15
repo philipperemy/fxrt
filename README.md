@@ -3,12 +3,23 @@
  
  ### Installation
  
+ From pip:
+ 
  ```
  pip install fxrt
  ```
  
+ From the sources:
+ 
+ ```
+ git clone git@github.com:philipperemy/fxrt.git && cd fxrt
+ pip3 install .
+ ```
+ 
  
  ### Example
+ 
+ Display the realtime feeds.
  
 ```bash
 $ python example.py
