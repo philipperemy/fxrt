@@ -1,5 +1,5 @@
 ## FXRT
- *Retrieve realtime FX prices from the Oanda broker* 
+ *Retrieve realtime FX prices from the Oanda broker.* 
  
  ### Installation
  
