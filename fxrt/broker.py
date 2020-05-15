@@ -1,5 +1,6 @@
 import re
-from time import time
+import threading
+from time import time, sleep
 
 import requests
 
@@ -31,3 +32,20 @@ def fx_rates():
     prices = re.findall('[A-Z]{3}/[A-Z]{3}=[0-9.=]+', prices)
     return {k: dict(zip(['bid', 'ask'], v.split('=')[:2])) for (k, v)
             in dict([p.split('=', 1) for p in prices]).items()}
+
+
+class FX:
+
+    def __init__(self):
+        self.rates = {}
+        self.thread = threading.Thread(target=self.poll)
+        self.thread.start()
+        self.ready = False
+        while not self.ready:
+            sleep(0.001)
+
+    def poll(self):
+        while True:
+            self.rates = fx_rates()
+            self.ready = True
+            sleep(3)
