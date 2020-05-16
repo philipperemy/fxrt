@@ -1,1 +1,1 @@
-from fxrt.broker import fx_rates
+from fxrt.broker import fx_rates, FX

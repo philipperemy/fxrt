@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='fxrt',
-    version='1.0',
+    version='1.1',
     description='Realtime FX prices',
     author='Philippe Remy',
     license='MIT',
