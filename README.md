@@ -13,7 +13,7 @@
  
  ```
  git clone git@github.com:philipperemy/fxrt.git && cd fxrt
- pip3 install .
+ pip install .
  ```
  
  
