@@ -48,4 +48,4 @@ class FX:
         while True:
             self.rates = fx_rates()
             self.ready = True
-            sleep(3)
+            sleep(1)
